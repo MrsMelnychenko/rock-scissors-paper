@@ -1,7 +1,9 @@
 .header {
     display: flex;
-    background-color: var(--violet);
 }
 .player-tab {
-    color: var(--yellow);
+background-color: violet;
+}
+.computer-tab {
+background-color: yellow;
 }
