@@ -1,9 +1,25 @@
 .header {
     display: flex;
+    justify-content: space-between; 
+    /* margin: 5px 75px 0px 75px; */
 }
 .player-tab {
-background-color: violet;
+    background-color: violet;
+    color: white;
+    margin: 0% 0% 0% -10%;
+    padding: 7% 5% 0% 15%;
+    min-width: 100px;
+    min-height: 30px;
+    text-align: right;
+    font-size: 20px;
 }
 .computer-tab {
-background-color: yellow;
+background-color: orange;
+color: white;
+    margin: 0% -10% 0% 0%;
+        padding: 7% 15% 0% 5%;
+        min-width: 150px;
+        min-height: 30px;
+            text-align: left;
+            font-size: 20px;
 }
