@@ -14,12 +14,47 @@
     font-size: 20px;
 }
 .computer-tab {
-background-color: orange;
-color: white;
+    background-color: orange;
+    color: white;
     margin: 0% -10% 0% 0%;
-        padding: 7% 15% 0% 5%;
-        min-width: 150px;
-        min-height: 30px;
-            text-align: left;
-            font-size: 20px;
+    padding: 7% 15% 0% 5%;
+    min-width: 150px;
+    min-height: 30px;
+    text-align: left;
+    font-size: 20px;
+}
+.player-counter {
+    font-size: 17px;
+}
+.computer-counter {
+    font-size: 17px;
+}
+.paper {
+    width: 100px;
+    height: 100px;
+}
+.rock {
+    width: 100px;
+    height: 100px;
+}
+.scissors {
+    width: 100px;
+    height: 100px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.win {
+    color: green;
+    text-align: center;
+}
+.lose {
+    color: red;
+    text-align: center;
+}
+.draw {
+    color: blue;
+    text-align: center;
 }
