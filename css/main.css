@@ -34,6 +34,9 @@ body {
 .computer-counter {
     font-size: 17px;
 }
+.cloud-block {
+    position: relative;
+}
 .background-cloud {
     display: block;
     margin-left: auto;
@@ -46,20 +49,27 @@ body {
 .icons {
     display: flex;
     justify-content: center;
-    position: relative;
-    top: -165px;
 }
 .paper {
     width: 100px;
     height: 100px;
+    position: absolute;
+    top: 25%;
+    left: 9%;
 }
 .rock {
     width: 100px;
     height: 100px;
+    position: absolute;
+    top: 25%;
+    left: 37%;
 }
 .scissors {
     width: 100px;
     height: 100px;
+    position: absolute;
+    top: 25%;
+    left: 65%;
 }
 .avatars {
     position: relative;
