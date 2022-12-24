@@ -10,22 +10,20 @@ body {
     background-color: violet;
     border-radius: 0 10px 10px 0;
     color: white;
-    margin: 0% 0% 0% -10%;
-    padding: 7% 5% 0% 15%;
+    padding-top: 10%;
     min-width: 100px;
     min-height: 30px;
-    text-align: right;
+    text-align: center;
     font-size: 20px;
 }
 .computer-tab {
     background-color: orange;
     border-radius: 10px 0 0 10px;
     color: white;
-    margin: 0% -10% 0% 0%;
-    padding: 7% 15% 0% 5%;
+    padding-top: 10%;
     min-width: 150px;
     min-height: 30px;
-    text-align: left;
+    text-align: center;
     font-size: 20px;
 }
 .player-counter {
@@ -41,8 +39,10 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 375px;
-    height: 225px;
+    /* width: 375px;
+    height: 225px; */
+    width: 100vw;
+    height: 35vh;
     /* max-width: 550px;
     max-height: 400px; */
 }
@@ -54,37 +54,38 @@ body {
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 25%;
-    left: 9%;
+    top: 30%;
+    left: 10%;
 }
 .rock {
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 25%;
-    left: 37%;
+    top: 30%;
+    left: 40%;
 }
 .scissors {
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 25%;
-    left: 65%;
+    top: 30%;
+    left: 70%;
 }
 .avatars {
     position: relative;
+    font-size: large;
 }
 .player-avatar {
-    position: absolute;
-    left:0;
-    top: 15px;
-    height: 90px;
-}
+        position: absolute;
+        left: 0;
+        top: 15px;
+        height: 100%;
+    }
 .computer-avatar {
     position: absolute;
-    right:0;
-    top:15px;
-    height: 90px;
+    right: 0;
+    top: 15px;
+    height: 100%;
 }
 .win {
     color: green;
@@ -97,4 +98,103 @@ body {
 .draw {
     color: blue;
     text-align: center;
+}
+@media (min-width: 600px) {
+    .background-cloud {
+        width: 90vw;
+        height: 45vh;
+    } 
+    .paper {
+        left: 17%;
+    }
+    .rock {
+        left: 42%;
+    }
+    .scissors {
+        left: 67%;
+    }
+}
+@media (min-width: 770px) {
+    .background-cloud {
+        width: 80vw;
+        height: 45vh;
+    }
+
+    .paper {
+        left: 25%;
+    }
+
+    .rock {
+        left: 43%;
+    }
+
+    .scissors {
+        left: 60%;
+    }
+}
+@media (min-width: 990px) {
+
+    .background-cloud {
+        width: 45vw;
+        height: 35vh;
+    }
+
+    .paper {
+        left: 31%;
+        width: 120px;
+        height: 120px;
+    }
+
+    .rock {
+        left: 44%;
+        width: 120px;
+        height: 120px;
+    }
+
+    .scissors {
+        left: 57%;
+        width: 120px;
+        height: 120px;
+    }
+    .player-tab {
+        min-width: 200px;
+        min-height: 60px;
+        font-size: 35px;
+    }
+    .computer-tab {
+        min-width: 200px;
+        min-height: 60px;
+        font-size: 30px;
+    }
+    .player-counter {
+         font-size: 20px;
+    }
+    .computer-counter {
+         font-size: 20px;
+    }
+}
+@media (min-width: 1200px) {
+
+    .background-cloud {
+        width: 45vw;
+        height: 40vh;
+    }
+
+    .paper {
+        left: 34%;
+        width: 120px;
+        height: 120px;
+    }
+
+    .rock {
+        left: 46%;
+        width: 120px;
+        height: 120px;
+    }
+
+    .scissors {
+        left: 58%;
+        width: 120px;
+        height: 120px;
+    }
 }
