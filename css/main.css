@@ -57,12 +57,19 @@ body {
     top: 30%;
     left: 10%;
 }
+.paper:hover {
+    height: 110px;
+}
 .rock {
     width: 100px;
     height: 100px;
     position: absolute;
     top: 30%;
     left: 40%;
+}
+.rock:hover {
+    height: 110px;
+    width: 110px;
 }
 .scissors {
     width: 100px;
@@ -71,21 +78,33 @@ body {
     top: 30%;
     left: 70%;
 }
+.scissors:hover {
+    height: 110px;
+    width: 110px;
+}
 .avatars {
     position: relative;
     font-size: large;
 }
 .player-avatar {
-        position: absolute;
-        left: 0;
-        top: 15px;
-        height: 100%;
-    }
+    position: absolute;
+    left: 0;
+    top: 15px;
+    height: 100%;
+}
+.player-avatar:hover {
+    height: 110%;
+    top: 0px;
+}
 .computer-avatar {
     position: absolute;
     right: 0;
     top: 15px;
     height: 100%;
+}
+.computer-avatar:hover {
+    height: 110%;
+    top: 0px;
 }
 .win {
     color: green;
@@ -138,23 +157,32 @@ body {
         width: 45vw;
         height: 35vh;
     }
-
     .paper {
         left: 31%;
         width: 120px;
         height: 120px;
     }
-
+    .paper:hover {
+        height: 130px;
+        width: 130px;
+    }
     .rock {
         left: 44%;
         width: 120px;
         height: 120px;
     }
-
+    .rock:hover {
+        height: 130px;
+        width: 130px;
+    }
     .scissors {
         left: 57%;
         width: 120px;
         height: 120px;
+    }
+    .scissors:hover {
+        height: 130px;
+        width: 130px;
     }
     .player-tab {
         min-width: 200px;
