@@ -1,32 +1,40 @@
 function game() {
-  const paper = document.querySelector(".paper");
-  const rock = document.querySelector(".rock");
-  const scissors = document.querySelector(".scissors");
+  const playerOptions = [
+    {
+      name: "paper",
+      element: document.querySelector(".paper"),
+    },
+    {
+      name: "rock",
+      element: document.querySelector(".rock"),
+    },
+    {
+      name: "scissors",
+      element: document.querySelector(".scissors"),
+    },
+  ];
   const playerAvatar = document.querySelector(".player-avatar");
   const mottoFooter = document.querySelector(".choice");
   let playerWin = 0;
   let computerWin = 0;
   let playerLoss = 0;
   let computerLoss = 0;
-
   function play() {
-    const playerOptions = [rock, paper, scissors];
     const computerOptions = ["rock", "paper", "scissors"];
-    playerOptions.forEach((option) => {
-      option.addEventListener("click", function () {
+    for (const option of playerOptions) {
+      option.element.addEventListener("click", function () {
         const choiceNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[choiceNumber];
-        winner(this.innerText, computerChoice);
+        console.log(computerChoice);
+        winner(option.name, computerChoice);
       });
-    });
+    }
   }
   function winner(player, computer) {
-    player = player.toLowerCase();
-    computer = computer.toLowerCase();
     if (player === computer) {
       mottoDraw();
-    } else if (player == "rock") {
-      if (computer == "paper") {
+    } else if (player === "rock") {
+      if (computer === "paper") {
         mottoLose();
         computerWin++;
         playerLoss++;
@@ -41,8 +49,8 @@ function game() {
         document.querySelector(".computer-win-counter").textContent =
           computerLoss;
       }
-    } else if (player == "scissors") {
-      if (computer == "rock") {
+    } else if (player === "scissors") {
+      if (computer === "rock") {
         mottoLose();
         computerWin++;
         playerLoss++;
@@ -57,8 +65,8 @@ function game() {
         document.querySelector(".computer-win-counter").textContent =
           computerLoss;
       }
-    } else if (player == "paper") {
-      if (computer == "scissors") {
+    } else if (player === "paper") {
+      if (computer === "scissors") {
         mottoLose();
         computerWin++;
         playerLoss++;
