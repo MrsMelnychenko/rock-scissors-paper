@@ -39,10 +39,7 @@ function game() {
       mottoLose();
       setTimeout(jumpingComputer, 200);
       setTimeout(resetJumpComputer, 400);
-      computerWin++;
-      playerLoss++;
-      document.querySelector(".player-loss-counter").textContent = playerLoss;
-      document.querySelector(".computer-win-counter").textContent = computerWin;
+      lossCounter()
     }
     if (player === "rock" && computer === "scissors") {
       mottoWin();
@@ -50,19 +47,13 @@ function game() {
       setTimeout(rotate, 200);
      setTimeout(resetJump, 1400);
       setTimeout(resetRotate, 1500);
-      computerLoss++;
-      playerWin++;
-      document.querySelector(".player-win-counter").textContent = playerWin;
-      document.querySelector(".computer-loss-counter").textContent = computerLoss;
+      winCounter()
     }
     if (player === "scissors" && computer === "rock") {
       mottoLose();
       setTimeout(jumpingComputer, 200);
       setTimeout(resetJumpComputer, 400);
-      computerWin++;
-      playerLoss++;
-      document.querySelector(".player-loss-counter").textContent = playerLoss;
-      document.querySelector(".computer-win-counter").textContent = computerWin;
+      lossCounter()
     }
     if (player === "scissors" && computer === "paper") {
       mottoWin();
@@ -70,19 +61,13 @@ function game() {
       setTimeout(rotate, 200);
        setTimeout(resetJump, 1400);
       setTimeout(resetRotate, 1500);
-      computerLoss++;
-      playerWin++;
-      document.querySelector(".player-win-counter").textContent = playerWin;
-      document.querySelector(".computer-loss-counter").textContent = computerLoss;
+      winCounter()
     }
     if (player === "paper" && computer === "scissors") {
       mottoLose();
       setTimeout(jumpingComputer, 200);
       setTimeout(resetJumpComputer, 400);
-      computerWin++;
-      playerLoss++;
-      document.querySelector(".player-loss-counter").textContent = playerLoss;
-      document.querySelector(".computer-win-counter").textContent = computerWin;
+      lossCounter()
     }
     if (player === "paper" && computer === "rock") {
       mottoWin();
@@ -90,11 +75,21 @@ function game() {
       setTimeout(rotate, 400);
       setTimeout(resetJump, 1400);
       setTimeout(resetRotate, 1500);
-      computerLoss++;
+      winCounter()
+    }
+  }
+//Counter change function
+  function winCounter() {
+    computerLoss++;
       playerWin++;
       document.querySelector(".player-win-counter").textContent = playerWin;
       document.querySelector(".computer-loss-counter").textContent = computerLoss;
-    }
+  }
+  function lossCounter() {
+    computerWin++;
+      playerLoss++;
+      document.querySelector(".player-loss-counter").textContent = playerLoss;
+      document.querySelector(".computer-win-counter").textContent = computerWin;
   }
 
   // Motto changing
