@@ -1,11 +1,23 @@
 body {
     background-color: #CFEBC7;
 }
+
+@keyframes moving {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.animation {
+    animation: moving 1s 1 linear;
+}
+
 .header {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-top: 20px;
 }
+
 .player-tab {
     background-color: violet;
     border-radius: 0 10px 10px 0;
@@ -16,6 +28,7 @@ body {
     text-align: center;
     font-size: 20px;
 }
+
 .computer-tab {
     background-color: orange;
     border-radius: 10px 0 0 10px;
@@ -26,15 +39,19 @@ body {
     text-align: center;
     font-size: 20px;
 }
+
 .player-counter {
     font-size: 17px;
 }
+
 .computer-counter {
     font-size: 17px;
 }
+
 .cloud-block {
     position: relative;
 }
+
 .background-cloud {
     display: block;
     margin-left: auto;
@@ -43,13 +60,13 @@ body {
     height: 225px; */
     width: 100vw;
     height: 35vh;
-    /* max-width: 550px;
-    max-height: 400px; */
 }
+
 .icons {
     display: flex;
     justify-content: center;
 }
+
 .paper {
     width: 100px;
     height: 100px;
@@ -57,9 +74,11 @@ body {
     top: 30%;
     left: 10%;
 }
+
 .paper:hover {
     height: 110px;
 }
+
 .rock {
     width: 100px;
     height: 100px;
@@ -67,10 +86,12 @@ body {
     top: 30%;
     left: 40%;
 }
+
 .rock:hover {
     height: 110px;
     width: 110px;
 }
+
 .scissors {
     width: 100px;
     height: 100px;
@@ -78,48 +99,59 @@ body {
     top: 30%;
     left: 70%;
 }
+
 .scissors:hover {
     height: 110px;
     width: 110px;
 }
+
 .avatars {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
 }
+
 .player-avatar {
-    max-height: 200px;
+    height: 100px;
 }
+
 .player-avatar:hover {
     margin-top: -20px;
 }
+
 .computer-avatar {
-    height: 50%;
-    max-height: 200px;
+    height: 100px;
 }
+
 .computer-avatar:hover {
     margin-top: -20px;
 }
+
 .choice {
     text-align: center;
     color: black;
 }
+
 @media (min-width: 600px) {
     .background-cloud {
         width: 90vw;
         height: 45vh;
-    } 
+    }
+
     .paper {
         left: 17%;
     }
+
     .rock {
         left: 42%;
     }
+
     .scissors {
         left: 67%;
     }
 }
+
 @media (min-width: 770px) {
     .background-cloud {
         width: 80vw;
@@ -137,57 +169,81 @@ body {
     .scissors {
         left: 60%;
     }
+
+    .player-avatar {
+        height: 200px;
+    }
+
+    .computer-avatar {
+        height: 200px;
+    }
+
+    .avatars {
+        font-size: 30px;
+    }
 }
+
 @media (min-width: 990px) {
 
     .background-cloud {
         width: 45vw;
         height: 35vh;
     }
+
     .paper {
         left: 31%;
         width: 120px;
         height: 120px;
     }
+
     .paper:hover {
         height: 130px;
         width: 130px;
     }
+
     .rock {
         left: 44%;
         width: 120px;
         height: 120px;
     }
+
     .rock:hover {
         height: 130px;
         width: 130px;
     }
+
     .scissors {
         left: 57%;
         width: 120px;
         height: 120px;
     }
+
     .scissors:hover {
         height: 130px;
         width: 130px;
     }
+
     .player-tab {
         min-width: 200px;
         min-height: 60px;
         font-size: 35px;
     }
+
     .computer-tab {
         min-width: 200px;
         min-height: 60px;
         font-size: 30px;
     }
+
     .player-counter {
-         font-size: 20px;
+        font-size: 20px;
     }
+
     .computer-counter {
-         font-size: 20px;
+        font-size: 20px;
     }
 }
+
 @media (min-width: 1200px) {
 
     .background-cloud {

@@ -14,6 +14,7 @@ function game() {
     },
   ];
   const playerAvatar = document.querySelector(".player-avatar");
+  const computerAvatar = document.querySelector(".computer-avatar");
   const mottoFooter = document.querySelector(".choice");
   let playerWin = 0;
   let computerWin = 0;
@@ -33,57 +34,70 @@ function game() {
   function winner(player, computer) {
     if (player === computer) {
       mottoDraw();
-    } else if (player === "rock") {
-      if (computer === "paper") {
-        mottoLose();
-        computerWin++;
-        playerLoss++;
-        document.querySelector(".player-loss-counter").textContent = playerLoss;
-        document.querySelector(".computer-win-counter").textContent =
-          computerWin;
-      } else {
-        mottoWin();
-        computerLoss++;
-        playerWin++;
-        document.querySelector(".player-loss-counter").textContent = playerWin;
-        document.querySelector(".computer-win-counter").textContent =
-          computerLoss;
-      }
-    } else if (player === "scissors") {
-      if (computer === "rock") {
-        mottoLose();
-        computerWin++;
-        playerLoss++;
-        document.querySelector(".player-loss-counter").textContent = playerLoss;
-        document.querySelector(".computer-win-counter").textContent =
-          computerWin;
-      } else {
-        mottoWin();
-        computerLoss++;
-        playerWin++;
-        document.querySelector(".player-loss-counter").textContent = playerWin;
-        document.querySelector(".computer-win-counter").textContent =
-          computerLoss;
-      }
-    } else if (player === "paper") {
-      if (computer === "scissors") {
-        mottoLose();
-        computerWin++;
-        playerLoss++;
-        document.querySelector(".player-loss-counter").textContent = playerLoss;
-        document.querySelector(".computer-win-counter").textContent =
-          computerWin;
-      } else {
-        mottoWin();
-        computerLoss++;
-        playerWin++;
-        document.querySelector(".player-loss-counter").textContent = playerWin;
-        document.querySelector(".computer-win-counter").textContent =
-          computerLoss;
-      }
+    }
+    if (player === "rock" && computer === "paper") {
+      mottoLose();
+      setTimeout(jumpingComputer, 200);
+      setTimeout(resetJumpComputer, 400);
+      computerWin++;
+      playerLoss++;
+      document.querySelector(".player-loss-counter").textContent = playerLoss;
+      document.querySelector(".computer-win-counter").textContent = computerWin;
+    }
+    if (player === "rock" && computer === "scissors") {
+      mottoWin();
+      setTimeout(jumpingPlayer, 200);
+      setTimeout(rotate, 200);
+     setTimeout(resetJump, 1400);
+      setTimeout(resetRotate, 1500);
+      computerLoss++;
+      playerWin++;
+      document.querySelector(".player-win-counter").textContent = playerWin;
+      document.querySelector(".computer-loss-counter").textContent = computerLoss;
+    }
+    if (player === "scissors" && computer === "rock") {
+      mottoLose();
+      setTimeout(jumpingComputer, 200);
+      setTimeout(resetJumpComputer, 400);
+      computerWin++;
+      playerLoss++;
+      document.querySelector(".player-loss-counter").textContent = playerLoss;
+      document.querySelector(".computer-win-counter").textContent = computerWin;
+    }
+    if (player === "scissors" && computer === "paper") {
+      mottoWin();
+      setTimeout(jumpingPlayer, 200);
+      setTimeout(rotate, 200);
+       setTimeout(resetJump, 1400);
+      setTimeout(resetRotate, 1500);
+      computerLoss++;
+      playerWin++;
+      document.querySelector(".player-win-counter").textContent = playerWin;
+      document.querySelector(".computer-loss-counter").textContent = computerLoss;
+    }
+    if (player === "paper" && computer === "scissors") {
+      mottoLose();
+      setTimeout(jumpingComputer, 200);
+      setTimeout(resetJumpComputer, 400);
+      computerWin++;
+      playerLoss++;
+      document.querySelector(".player-loss-counter").textContent = playerLoss;
+      document.querySelector(".computer-win-counter").textContent = computerWin;
+    }
+    if (player === "paper" && computer === "rock") {
+      mottoWin();
+      setTimeout(jumpingPlayer, 200);
+      setTimeout(rotate, 400);
+      setTimeout(resetJump, 1400);
+      setTimeout(resetRotate, 1500);
+      computerLoss++;
+      playerWin++;
+      document.querySelector(".player-win-counter").textContent = playerWin;
+      document.querySelector(".computer-loss-counter").textContent = computerLoss;
     }
   }
 
+  // Motto changing
   function mottoWin() {
     mottoFooter.textContent = "You Win!";
     mottoFooter.style.color = "green";
@@ -96,25 +110,26 @@ function game() {
     mottoFooter.textContent = "Draw!";
     mottoFooter.style.color = "grey";
   }
-  function resetMotto() {
-    mottoFooter.textContent = "Make your choice!";
-    mottoFooter.style.color = "black";
+
+  //   Animation of jumps
+  function jumpingPlayer() {
+    playerAvatar.style.marginTop = "-60px";
   }
-  //Animation of jumps
-  //   function jumpingPlayer() {
-  //     playerAvatar.style.marginTop = "-40px";
-  //   }
-  //   function resetJump() {
-  //     playerAvatar.style.marginTop = "0px";
-  //   }
-  //   paper.addEventListener("click", mottoWin);
-  //   paper.addEventListener("click", () => {
-  //     setTimeout(resetMotto, 2000);
-  //   });
-  //   paper.addEventListener("click", jumpingPlayer);
-  //   paper.addEventListener("click", () => {
-  //     setTimeout(resetJump, 200);
-  //   });
+  function jumpingComputer() {
+    computerAvatar.style.marginTop = "-60px";
+  }
+  function resetJump() {
+    playerAvatar.style.marginTop = "0px";
+  }
+  function resetJumpComputer() {
+    computerAvatar.style.marginTop = "0px";
+  }
+  function rotate() {
+    playerAvatar.classList.add("animation");
+  }
+  function resetRotate() {
+    playerAvatar.classList.remove("animation");
+  }
   play();
 }
 game();
